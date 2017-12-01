@@ -18,7 +18,7 @@ $('#sign-up').submit(function (e) {
   const signUpPassword = $('#sign-up-password').val()
   const signUpPasswordConfirmation = $('#sign-up-password-confirmation').val()
   const data = {'credentials': {'email': signUpEmail, 'password': signUpPassword, 'password_confirmation': signUpPasswordConfirmation}}
-  const url = 'http://tic-tac-toe.wdibos.com/sign-up'
+  const url = 'https://ga-library-api.herokuapp.com/sign-up'
   $.ajax({
     type: 'POST',
     url: url,

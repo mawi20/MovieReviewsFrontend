@@ -43,5 +43,5 @@ module.exports = {
   onSignIn,
   onSignUp,
   onChangePassword
-  // onSignOut
+  onSignOut
 }

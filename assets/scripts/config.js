@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com'
-    // development: 'https://ga-wdi-boston.herokuapp.com'
+    production: 'http://mawimovie.herokuapp.com/',
+    development: 'https:///localhost:4741'
   }
 }
 
