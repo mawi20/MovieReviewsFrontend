@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'http://mawimovie.herokuapp.com/',
-    development: 'https:///localhost:4741'
+    production: 'https://mawimovie.herokuapp.com/',
+    development: 'http://localhost:4741'
   }
 }
 

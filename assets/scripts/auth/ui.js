@@ -1,7 +1,8 @@
 'use strict'
-
+const store = require('../store.js')
 const signInSuccess = function (data) {
   console.log(data)
+  store.user = data.user
   $('#message').text('Signed in succesfully')
 }
 
@@ -25,9 +26,10 @@ const changePasswordSuccess = function (data) {
   console.log(data)
   $('#message').text('changePassword succesfully')
 }
-const signOut = function (data) {
+const signOutSuccess = function (data) {
   console.log(data)
-  $('#message').text('signOut')
+  $('#message').text('signOut succesfully')
+  delete store.user
 }
 module.exports = {
   signInSuccess,
@@ -36,5 +38,5 @@ module.exports = {
   signUpFailure,
   changePasswordFailure,
   changePasswordSuccess,
-  signOut
+  signOutSuccess
 }
