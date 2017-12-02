@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store.js')
+
 const signInSuccess = function (data) {
   console.log(data)
   store.user = data.user

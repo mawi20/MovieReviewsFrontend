@@ -1,6 +1,7 @@
 'use strict'
 const config = require('../config')
 const store = require('../store')
+
 const signUp = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
@@ -12,7 +13,10 @@ const signIn = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
-    data
+    data,
+    success: function (data) {
+      $('#MovieLinkDiv').show()
+    }
   })
 }
 const changePassword = function (data) {
