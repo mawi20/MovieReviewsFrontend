@@ -1,2 +1,26 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: lightblue;
+
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: verdana;
+}
+form {
+    width: 20%;
+}
+Div {
+  font-size: 100px;
+  text-align: center;
+  // background-color: lightgrey;
+  // // width: 100px;
+  // border: 25px solid green;
+  // padding: 25px;
+  // margin: 25px;
+}

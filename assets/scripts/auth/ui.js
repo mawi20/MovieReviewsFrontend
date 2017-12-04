@@ -5,6 +5,7 @@ const signInSuccess = function (data) {
   console.log(data)
   store.user = data.user
   $('#message').text('Signed in succesfully')
+  // $('#form').hide()
 }
 
 const signInFailure = function (error) {
