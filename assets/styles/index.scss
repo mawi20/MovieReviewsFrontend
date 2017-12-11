@@ -3,7 +3,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   background-color: lightblue;
-
+  text-align: center;
 }
 
 h1 {
@@ -16,11 +16,15 @@ form {
     width: 20%;
 }
 Div {
-  font-size: 100px;
+  font-size: 20px;
   text-align: center;
   // background-color: lightgrey;
   // // width: 100px;
   // border: 25px solid green;
   // padding: 25px;
   // margin: 25px;
+}
+
+.container-fluid {
+  text-align: center;
 }

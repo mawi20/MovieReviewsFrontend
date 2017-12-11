@@ -12,47 +12,120 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
       <h1>MawiMovie</h1>
       <header class="centered"></header>
-      <div class="text-center"></div>
-      <p id="message"></p>
+
+      <!-- <div class="text-center"></div>
+      <p id="message"></p> -->
       <form id="sign-up">
         <fieldset>
-          <legend>sign-up!</legend>
-          <input type="text" id="sign-up-email" name="credentials[email]">
-          <input type="password" id="sign-up-password" name="credentials[password]">
-          <input type="password" id="sign-up-password-confirmation" name="credentials[password_confirmation]">
-          <input type="submit" name="submit" value="Sign up!">
+          <legend>sign-up</legend>
+          <input type="text" name="credentials[email]" placeholder="Email Address">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Sign up">
         </fieldset>
       </form>
       <form id="sign-in">
         <fieldset>
-            <legend>sign-in!</legend>
-            <input type="text" id="sign-in-email" name="credentials[email]" >
-            <input type="password" id="sign-in-password" name="credentials[password]" ><input type="submit" name="submit" value="Sign in!">
+            <legend>sign-in</legend>
+            <input type="text" name="credentials[email]" placeholder="Email Address"/>
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" name="submit" value="Sign in!">
         </fieldset>
       </form>
       <form id="change-password">
           <fieldset>
-            <legend>change password!</legend>
+            <legend>change password</legend>
             <input type="password" name="passwords[old]" placeholder="old pass">
             <input type="password" name="passwords[new]" placeholder="new pass">
-            <input type="submit" name="submit" value="change-password!">
+            <input type="submit" name="submit" value="change-password">
           </fieldset>
       </form>
       <form id="sign-out">
           <fieldset>
-            <legend>sign-out!</legend>
+            <legend>sign-out</legend>
             <!-- <input type="text" id="sign-out" placeholder="sign-out"> -->
             <input type="submit" name="submit" value="sign out!">
           </fieldset>
               </form>
-              <div class="col-md-4 text-center box"></div>
-              <div class="col-md-12 text-center box"></div>
-        <div class="col-md-12 text-center box" id="MovieLinkDiv">
+
+<br>
+
+<br>
+<form id="get-movie">
+      <fieldset>
+      <button class="btn-primary" name="submit" type="submit">Get Movies</button>
+    </fieldset>
+    </form
+
+    <div class="display-movies" id="display-movies">
+  <br>
+
+  <p id="message"></p>
+  <br>
+
+  <br>
+  <form id="save-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="rating" class="form-control" placeholder="Rating">
+      <button class="btn-primary" type="submit">Save Movie</button>
+    </div>
+  </div>
+</form>
+<br>
+
+<br>
+<form id="update-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="note[title]" id="update-by-movie-title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="rating[movie]" id="update-by-movie-rating" class="form-control" placeholder="Rating">
+      <div class="col">
+        <input type="text" name="movie[id]" id="update-by-movie-id" class="form-control" placeholder="Movie ID">
+      <button class="btn-primary" type="submit">Update Movie</button>
+    </div>
+    </div>
+  </div>
+</form>
+
+
+              <!-- <div class="col-md-4 text-center box"></div>
+              <div class="col-md-4 text-center box"></div> -->
+        <!-- <div class="col-md-12 text-center box" id="MovieLinkDiv">
           <a href="#" id="MovieLink"> List of Movies</a>
-        </div>
-        <div class="col-md-12 text-center box" id="MovieList"></div>
+        </div> -->
+        <!-- <div id = "button_wrapper">
+           <form id="get-movies">
+            <fieldset>
+              <input type="submit" name="submit" value="ShowAllMovies">
+            </fieldset>
+          </form>
+             <!- <button type="submit" id="MovieLinkDiv">List of Movies</button> -->
+             <!-- <div id="MovieLink"></div> -->
+          <!-- </div> -->
+            <!-- <form id="create-movies"> -->
+              <!-- <fieldset> -->
+                <!-- <input type="submit" name="submit" value="CreateMovie"> -->
+              <!-- </fieldset> -->
+            <!-- </form> -->
+              <!-- <form id="update-movies"> -->
+                <!-- <fieldset> -->
+                  <!-- <input type="submit" name="submit" value="UpdateMovie"> -->
+                <!-- </fieldset> -->
+              <!-- </form> -->
+            <!-- <form id="edit-movies"> -->
+                <!-- <fieldset> -->
+                  <!-- <input type="submit" name="submit" value="EditMovie"> -->
+                <!-- </fieldset> -->
+              <!-- </form> -->
+        <!-- <div class="col-md-12 text-center box" id="MovieList"></div> -->
     </body>
 </html>

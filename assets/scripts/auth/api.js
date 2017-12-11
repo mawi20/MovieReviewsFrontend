@@ -15,7 +15,7 @@ const signIn = function (data) {
     method: 'POST',
     data,
     success: function (data) {
-      $('#MovieLinkDiv').show()
+      // $('#MovieLinkDiv').show()
     }
   })
 }
@@ -39,9 +39,32 @@ const signOut = function (data) {
     data
   })
 }
+
+// const getMovies = function (data) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/movies/',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
+// const createMovies = function (data) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/movies',
+//     method: 'POST',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
 module.exports = {
   signIn,
   signUp,
   changePassword,
   signOut
+  // getMovies,
+  // get
 }
