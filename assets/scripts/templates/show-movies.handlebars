@@ -1,0 +1,22 @@
+{{#each movie as |movie|}}
+
+
+  <ul data-id="{{movie.id}}">
+  <li>{{#if movie.movie}}
+    <large>Movie: {{movie.movie}}</large>
+  {{else}}
+    Movie not found
+  {{/if}}</li>
+    <li>{{#if movie.champion}}
+      <large>Champion: {{movie.champion}}</large>
+    {{else}}
+      Champion not found
+    {{/if}}</li>
+      <li>{{#if movie.id}}
+        <large>ID: {{movie.id}}</large>
+      {{else}}
+        Movie ID not found
+      {{/if}}</li>
+
+  </ul>
+{{/each}}

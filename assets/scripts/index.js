@@ -3,7 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
-// const movies = require('./movies/events.js')
+const movies = require('./movies/events.js')
 // import * as Cookies from 'js-cookie'
 const login = require('./auth/events.js')
 
@@ -11,12 +11,12 @@ $(() => {
   setAPIOrigin(location, config)
   authEvents.addHandlers()
   login.addHandlers()
-  // movies.addHandlers()
+  movies.addHandlers()
 })
 // const loginForms = function () {
 //   $('#change-password').show()
 //   $('#sign-out').show()
-//   $('save-note').show()
+//   $('save-movie').show()
 
 //   const url = config.apiOrigin + '/movies'
 //   console.log(url)
