@@ -14,7 +14,7 @@ const saveMovie = function (info) {
 
 const updateMovie = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/movies/' + data.note.id,
+    url: config.apiOrigin + '/movies/' + data.movie.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -36,7 +36,7 @@ const getMovie = function (data) {
 
 const deleteMovie = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/movies/' + data.note.id,
+    url: config.apiOrigin + '/movies/' + data.movie.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

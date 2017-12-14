@@ -53,7 +53,7 @@ const hideMovieForms = function () {
   $('#sign-out').hide()
   $('#save-movie').hide()
   $('#get-movie').hide()
-//   // $('#delete-note').hide()
+  $('#delete-movie').hide()
   $('#update-movie').hide()
   $('#sign-in').show()
   $('#sign-up').show()

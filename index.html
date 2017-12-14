@@ -73,6 +73,12 @@
       <input type="text" name="title" class="form-control" placeholder="Title">
     </div>
     <div class="col">
+      <input type="text" name="description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" class="form-control" placeholder="length">
+    </div>
+    <div class="col">
       <input type="text" name="rating" class="form-control" placeholder="Rating">
       <button class="btn-primary" type="submit">Save Movie</button>
     </div>
@@ -84,7 +90,13 @@
 <form id="update-movie">
   <div class="row">
     <div class="col">
-      <input type="text" name="note[title]" id="update-by-movie-title" class="form-control" placeholder="Title">
+      <input type="text" name="movie[title]" id="update-by-movie-title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" class="form-control" placeholder="length">
     </div>
     <div class="col">
       <input type="text" name="rating[movie]" id="update-by-movie-rating" class="form-control" placeholder="Rating">
@@ -102,7 +114,7 @@
 <form id="delete-movie">
   <div class="row">
     <div class="col">
-      <input type="text" name="movie[id]" id="delete-by-movie-id" class="form-control" placeholder="Delete by Movie ID">
+      <input type="text" name="movie[id]" id="delete-by-movie-id" class="form-control" placeholder="Movie ID">
       <button class="btn-primary" type="submit">Delete Movie</button>
     </div>
   </div>
