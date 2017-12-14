@@ -1,16 +1,26 @@
-{{#each movie as |movie|}}
+{{#each movies as |movie|}}
 
-
+<div class=
   <ul data-id="{{movie.id}}">
   <li>{{#if movie.movie}}
     <large>Movie: {{movie.movie}}</large>
   {{else}}
-    Movie not found
+    <!-- Movie not found -->
   {{/if}}</li>
-    <li>{{#if movie.champion}}
-      <large>Champion: {{movie.champion}}</large>
+    <li>{{#if movie.title}}
+      <large>Title: {{movie.title}}</large>
     {{else}}
-      Champion not found
+      <!-- Title not found -->
+  {{/if}}</li>
+    <li>{{#if movie.description}}
+      <large>Description: {{movie.description}}</large>
+    {{else}}
+      Description not found
+  {{/if}}</li>
+    <li>{{#if movie.length}}
+      <large>Length: {{movie.length}}</large>
+    {{else}}
+      Length not found
     {{/if}}</li>
       <li>{{#if movie.id}}
         <large>ID: {{movie.id}}</large>

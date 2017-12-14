@@ -3,7 +3,7 @@
 const showMovies = require('../templates/show-movies.handlebars')
 
 const saveMovieSuccess = function (data) {
-  $('#message').text('Champion movie created succesfully!')
+  $('#message').text('movie created succesfully!')
 }
 
 const saveMovieFailure = function (error) {
