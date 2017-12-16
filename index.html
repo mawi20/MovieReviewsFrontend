@@ -67,6 +67,23 @@
   <br>
 
   <br>
+  <form id="create-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" class="form-control" placeholder="length">
+    </div>
+    <div class="col">
+      <input type="text" name="id" class="form-control" placeholder="Rating">
+      <button class="btn-primary" type="submit">Create Movie</button>
+    </div>
+  </div>
+</form>
   <form id="save-movie">
   <div class="row">
     <div class="col">
@@ -90,22 +107,20 @@
 <form id="update-movie">
   <div class="row">
     <div class="col">
-      <input type="text" name="movie[title]" id="update-by-movie-title" class="form-control" placeholder="Title">
+      <input type="text" name="title" id="update-by-movie-title" class="form-control" placeholder="Title">
     </div>
     <div class="col">
-      <input type="text" name="description" class="form-control" placeholder="Description">
+      <input type="text" name="description" id="update-by-movie-description" class="form-control" placeholder="Description">
     </div>
     <div class="col">
-      <input type="text" name="length" class="form-control" placeholder="length">
+      <input type="text" name="length" id="update-by-movie-length" class="form-control" placeholder="length">
     </div>
     <div class="col">
-      <input type="text" name="rating[movie]" id="update-by-movie-rating" class="form-control" placeholder="Rating">
-      <div class="col">
-        <input type="text" name="movie[id]" id="update-by-movie-id" class="form-control" placeholder="Movie ID">
+      <input type="text" name="rating" id="update-by-movie-rating" class="form-control" placeholder="Rating">
+      <input type="hidden" name="id" id="update-by-movie-id" class="form-control" placeholder="ID">
       <button class="btn-primary" type="submit">Update Movie</button>
     </div>
     </div>
-  </div>
 </form>
 <br>
 

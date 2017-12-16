@@ -22,11 +22,12 @@
     {{else}}
       Length not found
     {{/if}}</li>
-      <li>{{#if movie.id}}
-        <large>ID: {{movie.id}}</large>
+      <li>{{#if movie.rating}}
+        <large>Rating: {{movie.rating}}</large>
       {{else}}
-        Movie ID not found
+        Rating not found
       {{/if}}</li>
-
+<a class= "edit-movie" id="{{movie.id}}" href="#"> Edit Movie </a>
+<a class= "delete-movie" id="{{movie.id}}" href="#"> Delete Movie </a>
   </ul>
 {{/each}}

@@ -3,7 +3,7 @@ const store = require('../store.js')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up succesfully')
-  $('sign-up').trigger('reset')
+  // $('sign-up').trigger('reset')
 }
 
 const signInSuccess = function (data) {

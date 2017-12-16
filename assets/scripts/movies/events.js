@@ -2,6 +2,14 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require(`../../../lib/get-form-fields`)
 
+const onCreateMovie = function (event) {
+  const data = {'movie': getFormFields(this)}
+  event.preventDefault()
+  api.saveMovie(data)
+    .then(ui.saveMovieSuccess)
+    .catch(ui.saveMovieFailure)
+}
+
 const onSaveMovie = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -9,21 +17,25 @@ const onSaveMovie = function (event) {
     .then(ui.saveMovieSuccess)
     .catch(ui.saveMovieFailure)
 }
+const onEditMovie = function (event) {
+  // const data = getFormFields(this)
+  event.preventDefault()
+  $('.display-movies').empty()
+  api.getMovie(this.id)
+}
 
-const onGetMovie = function (event) {
+const onGetMovies = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  api.getMovie(data)
+  api.getMovies(data)
     .then(ui.getMovieSuccess)
     .catch(ui.getMovieFailure)
 }
 
 const onDeleteMovie = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
-  api.deleteMovie(data)
-    .then(ui.deleteMovieSuccess)
-    .catch(ui.deleteMovieFailure)
+  $('.display-movies').empty()
+  api.deleteMovie(this.id)
 }
 
 const onUpdateMovie = function (event) {
@@ -51,9 +63,12 @@ const hideMovieForm = function () {
 hideMovieForm()
 
 const addHandlers = function (event) {
+  $(document).on('click', '.edit-movie', onEditMovie)
+  $(document).on('click', '.delete-movie', onDeleteMovie)
+  $('#create-movie').on('submit', onCreateMovie)
   $('#save-movie').on('submit', onSaveMovie)
   $('#save-movie').on('submit', clearMovieForm)
-  $('#get-movie').on('submit', onGetMovie)
+  $('#get-movie').on('submit', onGetMovies)
   $('#delete-movie').on('submit', onDeleteMovie)
   $('#delete-movie').on('submit', clearMovieForm)
   $('#update-movie').on('submit', onUpdateMovie)
@@ -65,5 +80,5 @@ module.exports = {
   clearMovieForm,
   onUpdateMovie,
   onDeleteMovie,
-  onGetMovie
+  onGetMovies
 }

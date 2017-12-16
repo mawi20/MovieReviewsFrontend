@@ -20,6 +20,13 @@ const getMovieSuccess = (data) => {
 const getMovieFailure = function (data) {
   $('#message').text('Failed to get movies')
 }
+const createMovieSuccess = (data) => {
+  const onCreateMovie = createMovie({ movies: data.movies })
+  $('#message').text('Movies created succesfully!')
+}
+const createMovieFailure = function (data) {
+  $('#message').text('Failed to get movies')
+}
 
 const deleteMovieSuccess = function (data) {
   $('#message').text('Movie deleted successfully!')
@@ -31,6 +38,15 @@ const deleteMovieFailure = function (data) {
 
 const updateMovieSuccess = function (data) {
   $('#message').text('Movie succesfully updated!')
+}
+const updateMoviePopulate = function (data) {
+  console.log(data)
+  $('#update-movie').show()
+  $('#update-by-movie-title').val(data.movie.title)
+  $('#update-by-movie-description').val(data.movie.description)
+  $('#update-by-movie-length').val(data.movie.length)
+  $('#update-by-movie-rating').val(data.movie.rating)
+  $('#update-by-movie-id').val(data.movie.id)
 }
 
 const updateMovieFailure = function (data) {
@@ -46,5 +62,8 @@ module.exports = {
   deleteMovieSuccess,
   deleteMovieFailure,
   updateMovieSuccess,
-  updateMovieFailure
+  updateMovieFailure,
+  createMovieSuccess,
+  createMovieFailure,
+  updateMoviePopulate
 }

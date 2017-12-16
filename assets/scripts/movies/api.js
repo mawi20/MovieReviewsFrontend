@@ -1,21 +1,11 @@
 const store = require('../store')
 const config = require('../config')
+const ui = require('./ui')
 
-const saveMovie = function (info) {
+const saveMovie = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/movies/',
     method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data: { note: info }
-  })
-}
-
-const updateMovie = function (data) {
-  return $.ajax({
-    url: config.apiOrigin + '/movies/' + data.movie.id,
-    method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -23,7 +13,20 @@ const updateMovie = function (data) {
   })
 }
 
-const getMovie = function (data) {
+const updateMovie = function (data) {
+  const submitData = { 'movie': data }
+  console.log(submitData)
+  return $.ajax({
+    url: config.apiOrigin + '/movies/' + submitData.movie.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: submitData
+  })
+}
+
+const getMovies = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/movies/',
     method: 'GET',
@@ -33,21 +36,32 @@ const getMovie = function (data) {
     data
   })
 }
-
-const deleteMovie = function (data) {
+const getMovie = function (id) {
   return $.ajax({
-    url: config.apiOrigin + '/movies/' + data.movie.id,
-    method: 'DELETE',
+    url: config.apiOrigin + '/movies/' + id,
+    method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
+    success: function (data) {
+      ui.updateMoviePopulate(data)
+    }
+  })
+}
+const deleteMovie = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/movies/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
 module.exports = {
   saveMovie,
   updateMovie,
-  getMovie,
-  deleteMovie
+  getMovies,
+  deleteMovie,
+  getMovie
 }

@@ -7,10 +7,10 @@ body {
 }
 
 h1 {
-    color: white;
-    text-align: center;
-    font-size: 100px;
-    font-family: verdana;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  font-family: verdana;
 }
 form {
     width: 20%;
@@ -18,9 +18,7 @@ form {
 Div {
   font-size: 20px;
   text-align: center;
-  background-color: lightgrey;
-  // // width: 100px;
-  // border: 25px solid green;
+  background-color: lightblue;
   // padding: 25px;
   // margin: 25px;
 }
@@ -31,4 +29,10 @@ Div {
 
 .display-movies {
   background-color: lightblue;
+  // width: 10px;
+  // border: 25px solid green;
+}
+
+.getMovie {
+  text-align: auto;
 }
