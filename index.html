@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>MawiMovie</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+      <h1>MawiMovie</h1>
+      <header class="centered"></header>
+
+      <!-- <div class="text-center"></div>
+      <p id="message"></p> -->
+      <form id="sign-up">
+        <fieldset>
+          <legend>sign-up</legend>
+          <input type="text" name="credentials[email]" placeholder="Email Address">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Sign up">
+        </fieldset>
+      </form>
+      <form id="sign-in">
+        <fieldset>
+            <legend>sign-in</legend>
+            <input type="text" name="credentials[email]" placeholder="Email Address"/>
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+      <form id="change-password">
+          <fieldset>
+            <legend>change password</legend>
+            <input type="password" name="passwords[old]" placeholder="old pass">
+            <input type="password" name="passwords[new]" placeholder="new pass">
+            <input type="submit" name="submit" value="change-password">
+          </fieldset>
+      </form>
+      <form id="sign-out">
+          <fieldset>
+            <legend>sign-out</legend>
+            <!-- <input type="text" id="sign-out" placeholder="sign-out"> -->
+            <input type="submit" name="submit" value="sign out!">
+          </fieldset>
+              </form>
+
+<br>
+
+<br>
+<form id="get-movie">
+      <fieldset>
+      <button class="btn-primary" name="submit" type="submit">Get Movies</button>
+    </fieldset>
+  </form>
+    <div class="display-movies" id="display-movies"></div>
+
+  <br>
+
+  <p id="message"></p>
+  <br>
+
+  <br>
+  <form id="create-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" class="form-control" placeholder="length">
+    </div>
+    <div class="col">
+      <input type="text" name="id" class="form-control" placeholder="Rating">
+      <button class="btn-primary" type="submit">Create Movie</button>
+    </div>
+  </div>
+</form>
+  <!-- <form id="save-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" class="form-control" placeholder="length">
+    </div>
+    <div class="col">
+      <input type="text" name="rating" class="form-control" placeholder="Rating">
+      <button class="btn-primary" type="submit">Save Movie</button>
+    </div>
+  </div>
+</form> -->
+<br>
+
+<br>
+<form id="update-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="title" id="update-by-movie-title" class="form-control" placeholder="Title">
+    </div>
+    <div class="col">
+      <input type="text" name="description" id="update-by-movie-description" class="form-control" placeholder="Description">
+    </div>
+    <div class="col">
+      <input type="text" name="length" id="update-by-movie-length" class="form-control" placeholder="length">
+    </div>
+    <div class="col">
+      <input type="text" name="rating" id="update-by-movie-rating" class="form-control" placeholder="Rating">
+      <input type="hidden" name="id" id="update-by-movie-id" class="form-control" placeholder="ID">
+      <button class="btn-primary" type="submit">Update Movie</button>
+    </div>
+    </div>
+</form>
+<!-- <form id="delete-movie">
+  <div class="row">
+    <div class="col">
+      <input type="text" name="movie[id]" id="delete-by-movie-id" class="form-control" placeholder="Movie ID">
+      <button class="btn-primary" type="submit">Delete Movie</button>
+    </div>
+  </div>
+</form> -->
+    </body>
+</html>
