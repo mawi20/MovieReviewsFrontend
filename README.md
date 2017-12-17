@@ -2,40 +2,46 @@
 
 Overview
 Link to Front End: https://github.com/mawi20/MovieReviewsFrontend
-Link to background End Repo:
-Link to API:
+
+Link to back End Repo:
+
+Link to API:https://mawimovie.herokuapp.com/
+
 Link to API GitHub Repo:
 
 For my second project,
 I built a full-stack single page application that allowes a user to sign up, sign in, change password, create a resource, read a resource, update a resource, delete a resource and sign out. I chose to build a site that lets users go on and make a make a movie with title, description, length, and rating. My user stories are:
 
 A user can create an account and log in.
+
 A user can change their password and log out.
+
 A user can look at many movies.
+
 A user can see the movies they created.
+
 A user can see a list of all movies.
+
 A user can update or remove a movie.
 
 Technologies Used
 
-HTML5,
+HTML5
 
-CSS3,
+CSS3
 
-SASS,
+SASS
 
-Bootstrap,
+Bootstrap
 
-JavaScript,
+JavaScript
 
-jQuery,
+jQuery
 
-Ruby on Rails,
+Ruby on Rails
 
-Handlebars,
+Handlebars
 
-postgreSQL,
+postgreSQL
 
 My front end is deployed on GitHub and the backend is deployed on Heroku.
-
-# MawiMovie.github.io
