@@ -2,32 +2,35 @@
 
 <div class=
   <ul data-id="{{movie.id}}">
-  <li>{{#if movie.movie}}
+  <div{{#if movie.movie}}
     <large>Movie: {{movie.movie}}</large>
   {{else}}
     <!-- Movie not found -->
-  {{/if}}</li>
-    <li>{{#if movie.title}}
+  {{/if}}</div>
+    <div{{#if movie.title}}
       <large>Title: {{movie.title}}</large>
     {{else}}
       <!-- Title not found -->
-  {{/if}}</li>
-    <li>{{#if movie.description}}
+  {{/if}}</div>
+    <div{{#if movie.description}}
       <large>Description: {{movie.description}}</large>
     {{else}}
-      Description not found
-  {{/if}}</li>
-    <li>{{#if movie.length}}
+      <!-- Description not found -->
+  {{/if}}</div>
+    <div{{#if movie.length}}
       <large>Length: {{movie.length}}</large>
     {{else}}
-      Length not found
-    {{/if}}</li>
-      <li>{{#if movie.rating}}
+      <!-- Length not found -->
+    {{/if}}</div>
+      <div{{#if movie.rating}}
         <large>Rating: {{movie.rating}}</large>
       {{else}}
-        Rating not found
-      {{/if}}</li>
+        <!-- Rating not found -->
+      {{/if}}</div>
 <a class= "edit-movie" id="{{movie.id}}" href="#"> Edit Movie </a>
+<br>
+
+</br>
 <a class= "delete-movie" id="{{movie.id}}" href="#"> Delete Movie </a>
   </ul>
 {{/each}}

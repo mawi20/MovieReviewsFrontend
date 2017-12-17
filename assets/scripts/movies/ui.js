@@ -21,7 +21,7 @@ const getMovieFailure = function (data) {
   $('#message').text('Failed to get movies')
 }
 const createMovieSuccess = (data) => {
-  const onCreateMovie = createMovie({ movies: data.movies })
+  // const onCreateMovie = createMovie({ movies: data.movies })
   $('#message').text('Movies created succesfully!')
 }
 const createMovieFailure = function (data) {

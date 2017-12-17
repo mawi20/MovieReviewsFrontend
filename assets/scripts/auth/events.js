@@ -55,6 +55,7 @@ const hideMovieForms = function () {
   $('#get-movie').hide()
   $('#delete-movie').hide()
   $('#update-movie').hide()
+  $('#create-movie').hide()
   $('#sign-in').show()
   $('#sign-up').show()
   // $('#message').text('Signed out succesfully')

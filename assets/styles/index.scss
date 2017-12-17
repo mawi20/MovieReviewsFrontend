@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 100px;
   font-family: verdana;
@@ -17,14 +17,15 @@ form {
 }
 Div {
   font-size: 20px;
-  text-align: center;
-  background-color: lightblue;
+  text-align: auto;
+  background-image: lightblue;
   // padding: 25px;
   // margin: 25px;
 }
 
 .container-fluid {
   text-align: center;
+  background-image: url("http://www.eumes.cat/en/wp-content/uploads/sites/7/cinema.jpg");
 }
 
 .display-movies {
@@ -33,6 +34,6 @@ Div {
   // border: 25px solid green;
 }
 
-.getMovie {
-  text-align: auto;
+.clearAuthForms {
+  text-align: center;
 }

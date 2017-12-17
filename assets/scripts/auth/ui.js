@@ -15,7 +15,7 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#save-movie').show()
   $('#get-movie').show()
-  $('#delete-movie').show()
+  $('#create-movie').show()
   $('#update-movie').show()
 }
 const signUpFailure = function (error) {

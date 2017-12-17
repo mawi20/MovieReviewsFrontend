@@ -21,6 +21,7 @@ const onEditMovie = function (event) {
   // const data = getFormFields(this)
   event.preventDefault()
   $('.display-movies').empty()
+  $('#update-movie').hide()
   api.getMovie(this.id)
 }
 
